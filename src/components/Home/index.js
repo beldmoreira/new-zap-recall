@@ -1,23 +1,16 @@
 import {HomeStyle, Container, Typography} from "./style";
-import {HomeButton} from "../HomeButton"
-import Logo from "../assets/logo.svg"
-import {useState} from 'react';
+import HomeButton from "../HomeButton";
+import Logo from "../../assets/logo.svg";
 
-export default function Home(){
+export default function Home({setScreen}){
     return(
     <HomeStyle>
     <Container>
         <img src = {Logo} alt = "game-logo" />
         <Typography> Zap Recall </Typography>
-        <HomeButton onClick={() => setScreen('')}/>
+        <HomeButton onClick={() => setScreen('deckPage')}/>
     </Container>
     </HomeStyle>    
     );
 }
 
-export default function StartButton(){
-    const[screen,setScreen]= useState('') 
-     return(
-        setScreen()
-   );
-}
